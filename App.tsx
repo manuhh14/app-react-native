@@ -1,14 +1,17 @@
 import React from 'react';
+import './gesture-handler';
 import { View, Text, StyleSheet } from 'react-native';
-import { Styles } from './themes/Styles';
-import { LoginScreen } from './screens/LoginScreen';
-import { HomeScreen } from './screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { StackNavigation } from './navigation/StackNavigation';
+
 
 const App: React.FC = () => {
   return (
-    <View style={Styles.container}>
-      <LoginScreen/>
-    </View>
+
+    <NavigationContainer>
+
+      <StackNavigation />
+    </NavigationContainer>
   );
 };
 export default App;
